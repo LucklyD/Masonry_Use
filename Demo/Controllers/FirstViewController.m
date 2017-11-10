@@ -33,7 +33,7 @@
     UIView *containerView = [UIView new];
     [scrollView addSubview:containerView];
     [containerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(scrollView).insets(UIEdgeInsetsMake(padding, padding, padding, padding));
+        make.edges.equalTo(scrollView);
     }];
     
     UIView *redView = [UIView new];

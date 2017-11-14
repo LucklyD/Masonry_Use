@@ -10,6 +10,6 @@
 
 @interface SecondTCell : UITableViewCell
 
-@property (nonatomic, strong) UILabel *titleLab;
+- (void)setData:(SecondModel *)model;
 
 @end

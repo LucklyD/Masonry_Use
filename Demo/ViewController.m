@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
-#import "ThirdViewController.h"
 
 @interface ViewController ()
 
@@ -104,7 +103,7 @@
     [purpleView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(bgView1);
         make.left.mas_equalTo(bgView1).with.offset(50);
-        make.right.mas_equalTo(orangeView.mas_left).with.offset(-30);
+        make.right.mas_equalTo(orangeView.mas_left).with.offset(-10);
         make.width.mas_equalTo(orangeView);
         make.height.mas_equalTo(120);
     }];
@@ -123,13 +122,8 @@
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
-//        case ActionType_Second:{
-//            SecondViewController *vc = [[SecondViewController alloc]init];
-//            [self.navigationController pushViewController:vc animated:YES];
-//        }
-//            break;
-        case ActionType_Third:{
-            ThirdViewController *vc = [[ThirdViewController alloc]init];
+        case ActionType_Second:{
+            SecondViewController *vc = [[SecondViewController alloc]init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

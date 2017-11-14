@@ -9,6 +9,8 @@
 #ifndef AppConfig_h
 #define AppConfig_h
 
+#import "SecondModel.h"
+
 
 #define DE_W [UIScreen mainScreen].bounds.size.width
 #define DE_H [UIScreen mainScreen].bounds.size.height

@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
+#import "ThirdViewController.h"
 
 @interface ViewController ()
 
@@ -124,6 +125,11 @@
             break;
         case ActionType_Second:{
             SecondViewController *vc = [[SecondViewController alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case ActionType_Third:{
+            ThirdViewController *vc = [[ThirdViewController alloc]init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

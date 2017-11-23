@@ -30,49 +30,49 @@
     }];
     
     CGFloat padding = 10;
-    UIView *containerView = [UIView new];
-    [scrollView addSubview:containerView];
-    [containerView mas_makeConstraints:^(MASConstraintMaker *make) {
+    UIView *contentView = [UIView new];
+    [scrollView addSubview:contentView];
+    [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(scrollView).insets(UIEdgeInsetsMake(padding, padding, padding, padding));
     }];
     
     UIView *redView = [UIView new];
     redView.backgroundColor = [UIColor redColor];
-    [containerView addSubview:redView];
+    [contentView addSubview:redView];
     [redView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.equalTo(containerView).with.offset(padding);
+        make.left.top.equalTo(contentView).with.offset(padding);
         make.size.mas_equalTo(CGSizeMake(200, 500));
     }];
     
     UIView *blueView = [UIView new];
     blueView.backgroundColor = [UIColor blueColor];
-    [containerView addSubview:blueView];
+    [contentView addSubview:blueView];
     [blueView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(containerView).with.offset(padding);
+        make.top.mas_equalTo(contentView).with.offset(padding);
         make.left.equalTo(redView.mas_right).with.offset(padding);
-        make.right.mas_equalTo(containerView.mas_right).with.offset(-padding);
+        make.right.mas_equalTo(contentView.mas_right).with.offset(-padding);
         make.size.equalTo(redView);
     }];
 
     UIView *greenView = [UIView new];
     greenView.backgroundColor = [UIColor greenColor];
-    [containerView addSubview:greenView];
+    [contentView addSubview:greenView];
     [greenView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(containerView).with.offset(padding);
+        make.left.mas_equalTo(contentView).with.offset(padding);
         make.top.mas_equalTo(redView.mas_bottom).with.offset(padding);
         make.size.equalTo(redView);
-        make.bottom.mas_equalTo(containerView.mas_bottom).with.offset(-padding);
+        make.bottom.mas_equalTo(contentView.mas_bottom).with.offset(-padding);
     }];
     
     UIView *yellowView = [UIView new];
     yellowView.backgroundColor = [UIColor yellowColor];
-    [containerView addSubview:yellowView];
+    [contentView addSubview:yellowView];
     [yellowView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(greenView.mas_right).with.offset(padding);
         make.top.mas_equalTo(redView.mas_bottom).with.offset(padding);
         make.size.equalTo(redView);
-        make.bottom.mas_equalTo(containerView.mas_bottom).with.offset(-padding);
-        make.right.mas_equalTo(containerView.mas_right).with.offset(-padding);
+        make.bottom.mas_equalTo(contentView.mas_bottom).with.offset(-padding);
+        make.right.mas_equalTo(contentView.mas_right).with.offset(-padding);
     }];
 }
 

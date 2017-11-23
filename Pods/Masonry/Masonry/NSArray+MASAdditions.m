@@ -80,7 +80,6 @@
                 else {//first one
                     make.top.equalTo(tempSuperView).offset(leadSpacing);
                 }
-                
             }];
             prev = v;
         }
